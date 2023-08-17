@@ -4,17 +4,49 @@ sections:
 - block: hero
   content:
     image:
-      filename: welcome.jpg
+      filename: omics-health.png
     text: |
       <br>
 
-      The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+      The **Omics for Health (omics4health)** is an organization which aims to improve the junior researchers communication in the omics and human health care filed.
     title: |
-      Wowchemy
-      Research Group
+      **Omics for Health**
+
 - block: collection
   content:
-    count: 5
+    count: 3
+    filters:
+      author: ""
+      category: ""
+      exclude_featured: false
+      publication_type: ""
+      tag: ""
+    offset: 0
+    order: desc
+    page_type: event
+    subtitle: null
+    text: null
+    title: Upcoming Events
+  design:
+    columns: "1"
+    view: card
+    background:
+      image: 
+        filename: events.jpg
+        filters:
+          brightness: 0.5
+      #  Image fit. Options are `cover` (default), `contain`, or `actual` size.
+      size: cover
+      # Image focal point. Options include `left`, `center` (default), or `right`.
+      position: center
+      # Use a fun parallax-like fixed background effect on desktop? true/false
+      parallax: true
+      # Text color (true=light, false=dark, or remove for the dynamic theme color).
+      text_color_light: true
+
+- block: collection
+  content:
+    count: 3
     filters:
       author: ""
       category: ""
@@ -30,37 +62,7 @@ sections:
   design:
     columns: "1"
     view: card
-- block: markdown
-  content:
-    subtitle: ""
-    text: null
-    title: null
-  design:
-    background:
-      image:
-        filename: coders.jpg
-        filters:
-          brightness: 1
-        parallax: false
-        position: center
-        size: cover
-        text_color_light: true
-    columns: "1"
-    css_class: fullscreen
-    spacing:
-      padding:
-      - 20px
-      - "0"
-      - 20px
-      - "0"
-- block: markdown
-  content:
-    subtitle: null
-    text: |
-      {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-    title: null
-  design:
-    columns: "1"
+
 title: null
 type: landing
 ---
