@@ -5,7 +5,7 @@ theme: "starter-hugo-research-group"
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: omics4health # Website name
-baseURL: 'https://example.com/' # Website URL
+baseURL: 'http://omics4health.github.io' # Website URL
 
 ############################
 ## LANGUAGE
