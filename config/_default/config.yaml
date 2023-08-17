@@ -12,8 +12,8 @@ baseURL: 'http://omics4health.github.io' # Website URL
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: true
-defaultContentLanguageInSubdir: true
+hasCJKLanguage: false
+defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 ############################
