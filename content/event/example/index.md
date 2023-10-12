@@ -1,11 +1,11 @@
 ---
 abstract: test
-address:
-  city: Stanford
-  country: United States
-  postcode: "94305"
-  region: CA
-  street: 450 Serra Mall
+# address:
+#   city: Stanford
+#   country: United States
+#   postcode: "94305"
+#   region: CA
+#   street: 450 Serra Mall
 all_day: false
 authors: [admin]
 date: "2023-10-05T13:00:00Z"
