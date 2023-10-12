@@ -12,6 +12,7 @@ sections:
     title:
 
 - block: collection
+  id: post
   content:
     count: 3
     filters:
@@ -31,6 +32,7 @@ sections:
     view: card
 
 - block: collection
+  id: event
   content:
     count: 3
     filters:
@@ -61,6 +63,53 @@ sections:
       parallax: true
       # Text color (true=light, false=dark, or remove for the dynamic theme color).
       text_color_light: true
+
+
+- block: people
+  id: people
+  content:
+    sort_ascending: true
+    sort_by: Params.last_name
+    title: Team
+    subtitle: "[All Team Members](./people/)"
+    # text: |-
+    #   {{% callout note %}}
+    #   [All team members](./people/).
+    #   {{% /callout %}}
+    user_groups:
+    - Co-Chair
+    - Committee Members
+  design:
+    show_interests: false
+    show_role: true
+    show_social: true
+
+- block: contact
+  content:
+    # appointment_url: https://calendly.com
+    # autolink: true
+    # contact_links:
+    # - icon: twitter
+    #   icon_pack: fab
+    #   link: https://twitter.com/xiaotaoshen1990
+    #   name: Twitter
+    # - icon: weixin
+    #   icon_pack: fab
+    #   link: https://jaspershen.github.io/image/wechat_QR.jpg
+    #   name: WeChat
+    email: shenxt1990@outlook.com
+    form:
+      formspree:
+        id: xpzgpjby
+      netlify:
+        captcha: false
+      provider: formspree
+    subtitle: null
+    text: 
+    title: Join US
+  design:
+    columns: "2"
+  id: contact
 
 title: null
 type: landing
