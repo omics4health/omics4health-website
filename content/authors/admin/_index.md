@@ -34,27 +34,16 @@ social:
   icon: github
   icon_pack: fab
   # label: Follow me on GitHub
-  link: https://github.com/jaspershen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?hl=en&user=3TK9yz8AAAAJ
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/xiaotaoshen1990
+  link: https://github.com/omics4health
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/shenxt/
-- icon: weixin
-  icon_pack: fab
-  link: https://jaspershen.github.io/image/wechat_QR.jpg
-- icon: cv
-  icon_pack: ai
-  link: file/XiaotaoShen_CV.pdf
 status:
   icon: ☕️
 superuser: true
 title: Xiaotao Shen
 user_groups:
+- Co-Chair
 - Committee Members
 ---
 

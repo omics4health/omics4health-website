@@ -6,9 +6,9 @@
 # Appearance
 
 appearance:
-  theme_day: minimal
+  theme_day: Classic
   theme_night:
-  font: minimal
+  font: Classic
   font_size: L
 
 # SEO
@@ -49,7 +49,7 @@ footer:
     license:
       enable: false
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
 
 # Localization
@@ -72,7 +72,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/omics4health/omics4health'
     content_dir: content
     branch: main
   avatar:

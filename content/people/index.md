@@ -7,6 +7,7 @@ sections:
     sort_by: Params.last_name
     title: Meet the Team
     user_groups:
+    - Co-Chair
     - Committee Members
   design:
     show_interests: true

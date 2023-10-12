@@ -8,8 +8,8 @@ address:
   street: 450 Serra Mall
 all_day: false
 authors: [admin]
-date: "2030-06-01T13:00:00Z"
-date_end: "2030-06-01T15:00:00Z"
+date: "2023-10-05T13:00:00Z"
+date_end: "2023-10-05T15:00:00Z"
 event: Wowchemy Conference
 event_url: https://example.org
 featured: false
@@ -19,16 +19,25 @@ image:
   focal_point: Right
 location: Wowchemy HQ
 projects: null
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2023-10-05T00:00:00Z"
 slides: null
 summary: An example event.
 tags: []
-title: Example Event
+title: Example Event new
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+
+# Youtube
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/dwmW18H1vk4?si=YA58peRpty-TV6W4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# Bilibili
+
+<iframe width="100%" height="500" src="//player.bilibili.com/player.html?aid=234359811&bvid=BV1S8411r7FM&cid=1289463658&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 Slides can be added in a few ways:
 
