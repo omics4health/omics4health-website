@@ -34,3 +34,6 @@ To replace Ye Peng's placeholder, add a verified portrait and set `image: images
 - Shengbo Wu: https://eng.ox.ac.uk/people/shengbo-wu . Oxford's official visitor profile explicitly identifies him as Associate Professor at Zhejiang Institute of Tianjin University, Shaoxing; used for role, research and portrait. The affiliation is Tianjin University, not Oxford.
 
 Contact was changed to `omics4health@gmail.com` at the user's request as a placeholder only; no mailbox was created or verified.
+
+- Yancong Zhang (added 2026-09-30): https://agis.caas.cn/kydw/kydwyjzx/spkxyjzx/db60d361712b40f385edb864e7884366.htm . The official profile states 研究员 and doctoral supervisor at the Agricultural Genomics Institute at Shenzhen, Chinese Academy of Agricultural Sciences, Food Science Research Center. Research summary follows its microbiome, multi-omics, AI and host–microbe–diet research directions. Sorted by Zhang before Zhou.
+Portrait: https://agis.caas.cn/images/2025-03/1138edd94c9348baaedc2da356c48e1e.jpg , associated with the exact lab profile in https://agis.caas.cn/kydw/kydwyjzx/index.htm ; original image preserved and displayed with CSS circular cropping.

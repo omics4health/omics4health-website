@@ -80,3 +80,13 @@
   department: Zhejiang Institute of Tianjin University, Shaoxing
   bio: Analysis and synthesis of microbial ecosystems, quorum-sensing communication networks and computational approaches to the human gut microbiota.
   profile_url: https://eng.ox.ac.uk/people/shengbo-wu
+
+- name: Yancong Zhang
+  last_name: Zhang
+  image: images/team/yancong-zhang.jpg
+  role: 研究员 · 博士生导师
+  affiliation: Agricultural Genomics Institute at Shenzhen, Chinese Academy of Agricultural Sciences
+  department: Food Science Research Center
+  bio: Microbiome research integrating multi-omics, AI and computational biology to study microbial functions, host–microbe–diet interactions and personalized nutrition.
+  profile_url: https://agis.caas.cn/kydw/kydwyjzx/spkxyjzx/db60d361712b40f385edb864e7884366.htm
+  profile_label: Institute profile

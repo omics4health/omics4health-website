@@ -13,7 +13,7 @@
 - 视觉：白底、黑灰正文、蓝色链接；不使用装饰性渐变、轨道插图或宣传口号。
 - 菜单：`config/_default/menus.yaml`；样式：`static/css/forum.css`。
 
-团队已更新为九位组织者，并按姓氏字母顺序排列；职称、单位、研究方向和来源链接保存在 `data/organizers.yaml`，官方照片保存在 `static/images/team/`。复旦两位成员的“青年研究员”保留官网原职称，不自行换算为 Assistant Professor。联系邮箱按组织者要求暂设为 `omics4health@gmail.com`（占位地址，未验证是否启用）。旧示例讲座和示例新闻已设为草稿，未删除源文件。
+团队已更新为十位组织者，并按姓氏字母顺序排列；职称、单位、研究方向和来源链接保存在 `data/organizers.yaml`，官方照片保存在 `static/images/team/`。复旦两位成员的“青年研究员”保留官网原职称，不自行换算为 Assistant Professor。联系邮箱按组织者要求暂设为 `omics4health@gmail.com`（占位地址，未验证是否启用）。旧示例讲座和示例新闻已设为草稿，未删除源文件。
 
 ## 添加讲座
 
