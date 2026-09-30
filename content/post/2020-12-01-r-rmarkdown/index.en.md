@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Hello R Markdown"
 author: "Frida Gomam"
 date: 2020-12-01T21:13:14-05:00
@@ -15,7 +16,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 You can embed an R code chunk like this:
 
 
-```r
+``` r
 summary(cars)
 ##      speed           dist       
 ##  Min.   : 4.0   Min.   :  2.00  
@@ -40,7 +41,7 @@ fit
 You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:
 
 
-```r
+``` r
 par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),

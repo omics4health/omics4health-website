@@ -1,0 +1,7 @@
+{{ with .Params.timezones }}
+<dl class="event-timezones" aria-label="Seminar times by location" data-event-start="{{ $.Params.event_date }}" data-event-end="{{ $.Params.event_end }}">
+  {{ range . }}
+  <div><dt>{{ .label }}</dt><dd data-time-zone="{{ .zone }}">{{ .fallback }}</dd></div>
+  {{ end }}
+</dl>
+{{ end }}

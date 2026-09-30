@@ -1,0 +1,82 @@
+# Profiles verified against the linked university pages, 2026-09-30.
+# Team display order is alphabetical by last_name.
+- name: Xiaotao Shen
+  last_name: Shen
+  image: images/team/xiaotao-shen.jpg
+  role: Nanyang Assistant Professor
+  affiliation: Nanyang Technological University, Singapore
+  department: Lee Kong Chian School of Medicine
+  bio: Metabolomics, multi-omics integration and bioinformatics methods for precision medicine.
+  profile_url: https://dr.ntu.edu.sg/entities/person/Xiaotao-Shen
+
+- name: Qi Su
+  last_name: Su
+  image: images/team/qi-su.png
+  role: Assistant Professor
+  affiliation: The Chinese University of Hong Kong
+  department: Department of Medicine & Therapeutics
+  bio: Gut microbiome, gut–brain interactions, autism, sleep disorders and fecal microbiota transplantation.
+  profile_url: https://www.mect.cuhk.edu.hk/people/qisu.html
+
+- name: Na Jiao
+  last_name: Jiao
+  image: images/team/na-jiao.jpg
+  role: 青年研究员
+  affiliation: Fudan University
+  department: School of Life Sciences
+  bio: Microbiota–host interactions, microbial resources and methods for microbiome analysis.
+  profile_url: https://life.fudan.edu.cn/0f/e9/c31282a659433/page.htm
+
+- name: Ye Peng
+  last_name: Peng
+  initials: YP
+  role: Research Assistant Professor
+  affiliation: The Chinese University of Hong Kong
+  department: The Jockey Club School of Public Health and Primary Care
+  bio: Early-life gut microbiome, multi-omics and computational methods for microbiome and antimicrobial resistance research.
+  profile_url: https://www.linkedin.com/in/ye-peng-68231a110/
+  profile_label: LinkedIn profile
+
+- name: Chang Liu
+  last_name: Liu
+  image: images/team/chang-liu.jpg
+  role: Professor
+  affiliation: Shandong University
+  bio: Gut microbial culturomics, discovery of functional gut bacteria and their mechanisms of action.
+  profile_url: https://www.mbtechinst.qd.sdu.edu.cn/info/1087/8030.htm
+
+- name: Xin Zhou
+  last_name: Zhou
+  image: images/team/xin-zhou.jpg
+  role: 青年研究员
+  affiliation: Fudan University
+  department: Institute of Intelligent Medicine
+  bio: Integration of metabolomics, immune profiling and microbiome data to study host–microbe interactions and disease.
+  profile_url: https://imi.fudan.edu.cn/info/1525/1148.htm
+
+- name: Jiliang Hu
+  last_name: Hu
+  image: images/team/jiliang-hu.jpg
+  role: Junior Principal Investigator
+  affiliation: Shenzhen Bay Laboratory
+  department: Institute of Systems and Physical Biology
+  bio: Quantitative and physical biology, microbial ecology and cancer ecology.
+  profile_url: https://smart.org.cn/smart-fellow/hujiliang
+
+- name: Zhiyuan Li
+  last_name: Li
+  image: images/team/zhiyuan-li.jpg
+  role: Assistant Professor
+  affiliation: Peking University
+  department: Center for Quantitative Biology
+  bio: Self-organization in biological systems, microbial evolution and community interactions, and computational methods for biological data.
+  profile_url: https://cqb.pku.edu.cn/info/1002/1817.htm
+
+- name: Shengbo Wu
+  last_name: Wu
+  image: images/team/shengbo-wu.jpg
+  role: Associate Professor
+  affiliation: Tianjin University
+  department: Zhejiang Institute of Tianjin University, Shaoxing
+  bio: Analysis and synthesis of microbial ecosystems, quorum-sensing communication networks and computational approaches to the human gut microbiota.
+  profile_url: https://eng.ox.ac.uk/people/shengbo-wu

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }} · Omics for Health</title>
+<meta name="description" content="Omics for Health is a researcher-led online forum for gut microbiome, proteomics and metabolomics research, meeting approximately once a month.">
+<link rel="stylesheet" href="{{ "css/forum.css" | relURL }}">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+{{ $logo := resources.Get "media/logo.png" }}
+<a class="brand" href="{{ "/" | relURL }}" aria-label="Omics for Health home"><img src="{{ $logo.RelPermalink }}" alt="Omics4health" width="2090" height="342"></a>
+<nav aria-label="Main navigation">
+{{ range .Site.Menus.main }}
+{{ if .HasChildren }}<details class="nav-dropdown"><summary{{ if eq $.Section "event" }} class="active"{{ end }}>{{ .Name }} <span aria-hidden="true">⌄</span></summary><div class="dropdown-menu">{{ range .Children }}<a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink (.URL | relURL) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</div></details>
+{{ else }}<a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink (.URL | relURL) }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+{{ end }}
+</nav></div></header>
+<main id="main">
+{{ if .IsHome }}
+<section class="wrap page about-page">
+  <header class="page-heading"><p class="section-label">About</p><h1>Omics for Health</h1><p class="intro">An online forum for gut microbiome,<br class="desktop-break"> proteomics and metabolomics research.</p></header>
+  <div class="about-layout">
+    <div class="about-copy">
+      <h2>About the forum</h2>
+      <p>Omics for Health (omics4health) is an online academic forum founded by a group of early-career faculty working in gut microbiome research and mass spectrometry-based omics, including proteomics and metabolomics.</p>
+      <p>Our organizers are primarily Chinese researchers. We meet approximately once a month to share research, discuss methods and exchange ideas with colleagues across these fields.</p>
+      <p>The forum provides a regular space for scientific discussion and for building connections between researchers interested in omics and health.</p>
+      <section class="participation"><h2>Participate</h2><p>Researchers and students with an interest in these areas are welcome to join our talks. Please contact us if you would like to attend, suggest a speaker or help organize a session.</p><a class="text-link" href="{{ "contact/" | relURL }}">Contact the organizers</a></section>
+    </div>
+    <aside class="forum-details" aria-label="Forum information">
+      <h2>The forum at a glance</h2>
+      <dl><dt>Format</dt><dd>Online seminars</dd><dt>Frequency</dt><dd>Approximately monthly</dd><dt>Research areas</dt><dd>Gut microbiome<br>Proteomics<br>Metabolomics</dd></dl>
+      <a class="text-link" href="{{ "event/" | relURL }}">Upcoming talks</a>
+    </aside>
+  </div>
+</section>
+{{ else if eq .Params.page_kind "team" }}
+<section class="wrap page"><h1>Team</h1><p class="intro narrow">The researchers who organize the Omics for Health forum.</p><h2 class="section-title">Organizers</h2><div class="team-grid">
+{{ range sort .Site.Data.organizers "last_name" }}
+<article class="person">
+  {{ if .image }}<img class="person-photo" src="{{ .image | relURL }}" alt="{{ .name }}" width="140" height="160" loading="lazy">{{ else }}<div class="person-placeholder" aria-label="Portrait not yet available"><span aria-hidden="true">{{ .initials }}</span></div>{{ end }}
+  <div class="person-info">
+    <h3>{{ .name }}</h3>
+    <p class="person-role">{{ .role }}</p>
+    <p class="person-affiliation">{{ .affiliation }}{{ with .department }}<span>{{ . }}</span>{{ end }}</p>
+    {{ with .bio }}<p class="person-bio">{{ . }}</p>{{ end }}
+    <a class="person-profile" href="{{ .profile_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }} — {{ .profile_label | default "University profile" }} (opens in a new tab)">{{ .profile_label | default "University profile" }}</a>
+  </div>
+</article>
+{{ end }}
+</div></section>
+{{ else if eq .Params.page_kind "contact" }}
+<section class="wrap page"><header class="page-heading"><h1>Join us</h1><p class="intro narrow">To attend a talk, suggest a speaker or get involved in the forum, please get in touch.</p></header><div class="contact-grid"><section><h2>Participating in the forum</h2><p>We welcome researchers and students working in the gut microbiome, proteomics, metabolomics and related areas.</p><p>You can contact us about:</p><ul class="join-list"><li>Attending an upcoming online seminar</li><li>Presenting your research or suggesting a speaker</li><li>Helping organize future sessions</li></ul></section><section class="contact-details"><h2>Contact</h2><a class="email" href="mailto:omics4health@gmail.com">omics4health@gmail.com</a><p>Please include your name, affiliation and a brief note about your research interests or enquiry.</p></section></div></section>
+{{ else if .Params.event_date }}
+<section class="wrap page event-body">
+<p class="section-label">{{ .Params.series | default "Online seminar" }}</p>
+<h1>{{ .Title }}</h1>
+{{ with .Params.title_zh }}<p class="event-title-zh" lang="zh">{{ . }}</p>{{ end }}
+<p class="intro">{{ .Params.speaker }}</p>
+<p>{{ with .Params.display_time }}{{ . }}{{ else }}{{ (time .Params.event_date).UTC.Format "02 Jan 2006 · 15:04" }} UTC{{ end }}</p>
+{{ partial "event-timezones.html" . }}
+{{ .Content }}
+{{ $ended := (time (.Params.event_end | default .Params.event_date)).Before now }}
+<a class="text-link" href="{{ if $ended }}{{ "event/past/" | relURL }}{{ else }}{{ "event/" | relURL }}{{ end }}">{{ if $ended }}Back to past events{{ else }}View upcoming events{{ end }}</a>
+</section>
+{{ else }}
+<section class="wrap page"><h1>{{ if eq .Params.page_kind "past" }}Past events{{ else }}Upcoming events{{ end }}</h1><p class="intro narrow">Research talks and conversations across the gut microbiome, proteomics and metabolomics.</p><nav class="event-tabs" aria-label="Event archive"><a href="{{ "event/" | relURL }}"{{ if ne .Params.page_kind "past" }} aria-current="page"{{ end }}>Upcoming</a><a href="{{ "event/past/" | relURL }}"{{ if eq .Params.page_kind "past" }} aria-current="page"{{ end }}>Past</a></nav>
+{{ $past := eq .Params.page_kind "past" }}{{ $events := slice }}
+{{ range where .Site.RegularPages "Section" "event" }}{{ if .Params.event_date }}{{ $end := time (.Params.event_end | default .Params.event_date) }}{{ if or (and $past ($end.Before now)) (and (not $past) (not ($end.Before now))) }}{{ $events = $events | append . }}{{ end }}{{ end }}{{ end }}
+{{ $events = sort $events "Params.event_date" }}{{ if $past }}{{ $events = sort $events "Params.event_date" "desc" }}{{ end }}
+{{ range $events }}<article class="event-card{{ if .Params.poster }} has-poster{{ end }}">
+{{ $eventPage := . }}{{ with .Resources.GetMatch (.Params.poster | default "__none__") }}{{ $thumb := .Fit "260x360" }}<a class="event-poster-link" href="{{ $eventPage.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ $thumb.RelPermalink }}" alt="" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy"></a>{{ end }}
+<div class="event-card-copy"><p class="eyebrow">{{ with .Params.display_time }}{{ . }}{{ else }}{{ (time .Params.event_date).UTC.Format "02 Jan 2006 · 15:04" }} UTC{{ end }} · ONLINE</p>
+{{ with .Params.series }}<p class="event-series">{{ . }}</p>{{ end }}
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+{{ with .Params.title_zh }}<p lang="zh">{{ . }}</p>{{ end }}
+<p>{{ .Params.speaker }}</p>{{ partial "event-timezones.html" . }}<p>{{ .Summary }}</p><a class="text-link" href="{{ .RelPermalink }}">View session details</a></div></article>{{ else }}<div class="empty-state"><div><h2>{{ if $past }}Past talks will be listed here.{{ else }}Next seminar to be announced.{{ end }}</h2><p>{{ if $past }}Past session details and available materials will appear here once added.{{ else }}We meet online approximately once a month. The next talk’s speaker, date and joining details will be announced here.{{ end }}</p><a class="text-link" href="{{ "contact/" | relURL }}">{{ if $past }}Get in touch{{ else }}Contact the organizers{{ end }}</a></div></div>{{ end }}
+</section>
+{{ end }}
+</main><footer><div class="wrap footer-inner"><span>© {{ now.Year }} Omics for Health</span><span>Gut microbiome · Proteomics · Metabolomics</span></div></footer>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details[open]').forEach(function(d){d.open=false})});document.addEventListener('click',function(e){document.querySelectorAll('details[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});</script>
+<script src="{{ "js/event-timezones.js" | relURL }}" defer></script>
+</body></html>

@@ -1,7 +1,4 @@
 ---
-banner:
-  caption: ""
-  image: ""
-title: Events
-view: compact
+title: Upcoming
+page_kind: upcoming
 ---
